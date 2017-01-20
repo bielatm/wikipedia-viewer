@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lora">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-3 col-xs-offset-1 col-md-6 col-xs-10">
+      <div class="row" id="box">
+        <div class="col-md-offset-2 col-xs-offset-1 col-md-8 col-xs-10">
+          <h2>Wikipedia Viewer</h2>
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" id="search" placeholder="Search"/>
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          </div>
+          <center>
+            <input value="Wiki Search" type="submit" class="btn btn-default" onclick="getWikiResults()">
+            <a class="btn btn-default" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">I'm Feeling Lucky</a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="results">
+    <div class="col-md-offset-3 col-xs-offset-1 col-md-6 col-xs-10">
+      <div class="list-group" id="list"></div>
+    </div>
+  </div>
+  <footer>
+    Written by <a id="me" href="https://codepen.io/bielatm/" target="_blank">Marlena.</a>
+  </footer>
+</div>
