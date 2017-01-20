@@ -3,7 +3,8 @@ function getWikiResults() {
   if (inputData.trim()) {
     $.ajax({
       type: "GET",
-      url: "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" + inputData + "&callback=JSON_CALLBACK",
+      url: "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch="
+      + inputData + "&callback=JSON_CALLBACK",
       dataType: "jsonp",
       success: printResults
     })
@@ -19,7 +20,8 @@ function printResults(data) {
   Object.keys(json).forEach(function(object) {
     aTag = document.createElement("a");
     aTag.className = "list-group-item";
-    aTag.setAttribute("href", "https://en.wikipedia.org/?curid=" + json[object].pageid.toString());
+    aTag.setAttribute("href", "https://en.wikipedia.org/?curid="
+    + json[object].pageid.toString());
     aTag.setAttribute("target", "_blank");
     aTag.innerHTML =
       '<h4 class="list-group-item-heading">'
